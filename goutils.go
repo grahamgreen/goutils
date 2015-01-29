@@ -16,3 +16,10 @@ func NotEmpty(s string) {
 		log.Fatal(errors.New("empty string"))
 	}
 }
+
+func DefaultIfEmpty(s, dflt string) string {
+	if len(s) == 0 {
+		return dflt
+	}
+	return s
+}
